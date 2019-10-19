@@ -15,7 +15,4 @@ ubuntu@ip-172-31-91-102:~/MADHAVA-RAO_Challenge$ ansible-playbook -i hosts --vau
 
 3). Test it by running the script verifying-webserver.sh
 
-ubuntu@ip-172-31-91-102:~/MADHAVA-RAO_Challenge$ ./verifying-webserver.sh
-Webserver is up
-ubuntu@ip-172-31-91-102:~/MADHAVA-RAO_Challenge$
 
