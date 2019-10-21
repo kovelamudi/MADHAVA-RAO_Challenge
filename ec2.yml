@@ -10,8 +10,7 @@
     keypair: asgdemo
     region: us-east-1
     count: 1
-  vars_files:
-    - aws_keys.yml
+  
 #Creating a security group
   tasks:
     - name: Create a security group
@@ -19,8 +18,6 @@
         name: "{{ security_group }}"
         description: The webservers security group
         region: "{{ region }}"
-        aws_access_key: "{{ aws_access_key }}"
-        aws_secret_key: "{{ aws_secret_key }}"
         rules:
           - proto: tcp
             from_port: 22
@@ -41,8 +38,6 @@
 #Creating and launching the EC2 instance
     - name: Launch the new EC2 Instance
       ec2:
-        aws_access_key: "{{ aws_access_key }}"
-        aws_secret_key: "{{ aws_secret_key }}"
         group: "{{ security_group }}"
         instance_type: "{{ instance_type }}"
         user_data: |
@@ -69,8 +64,6 @@
 #Tag the instance
     - name: Add tag to Instance(s)
       ec2_tag:
-        aws_access_key: "{{ aws_access_key }}"
-        aws_secret_key: "{{ aws_secret_key }}"
         resource: "{{ item.id }}" 
         region: "{{ region }}" 
         state: "present"
