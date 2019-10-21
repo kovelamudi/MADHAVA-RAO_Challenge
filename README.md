@@ -25,7 +25,7 @@ ubuntu@ip-172-31-91-102:~$ git clone https://github.com/kovelamudi/MADHAVA-RAO_C
 ansible-playbook -i hosts --vault-password-file=vault-passwd.txt ec2.yml
 
 
-ubuntu@ip-172-31-91-102:~/MADHAVA-RAO_Challenge$ ansible-playbook -i hosts --vault-password-file=vault-passwd.txt ec2.yml
+ubuntu@ip-172-31-91-102:~/MADHAVA-RAO_Challenge$ ansible-playbook -i hosts ec2.yml
 
 
 3). Test it by running the script verifying-webserver.sh
