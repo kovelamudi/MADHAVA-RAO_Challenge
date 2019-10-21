@@ -22,8 +22,6 @@ ubuntu@ip-172-31-91-102:~$ git clone https://github.com/kovelamudi/MADHAVA-RAO_C
 2). Run ansible playbook using the below command
 =================================================
 
-ansible-playbook -i hosts --vault-password-file=vault-passwd.txt ec2.yml
-
 
 ubuntu@ip-172-31-91-102:~/MADHAVA-RAO_Challenge$ ansible-playbook -i hosts ec2.yml
 
